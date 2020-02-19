@@ -12,12 +12,11 @@ export default class App extends Component {
     return (
       <div>
 
+   
         <div className="bg">
-        <div className="header">        </div>
-        <div className="Group"><img src={bg} /></div>
+        <div className="header"></div>
+        <img className="Group" src={bg}/>
         </div>
-
-
       </div>
     )
   }
