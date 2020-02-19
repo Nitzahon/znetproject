@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,31 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.header{
+  
+position: absolute;
+width: 1920px;
+height: 64px;
+left: 0px;
+top: -0.5px;
+
+background: #372861;
+}
+.bg{
+  position: absolute;
+width: 1654px;
+height: 1095px;
+left: 266px;
+top: -1px;
+
+background: #F7F7F7;
+}
+.Group{
+  position: absolute;
+width: 806.4px;
+height: 1080px;
+left: 1114px;
+top: 0px;
+
 }
