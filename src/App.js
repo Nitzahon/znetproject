@@ -25,7 +25,7 @@ export default class App extends Component {
       },
       {
         name: "Ping in the company",
-        createdOn: new Date(2020, 1, 17, 0, 0, 0, 0),
+        createdOn: new Date(2020, 1, 10, 0, 0, 0, 0),
         mode: true,
         protocols: ["ICMP"],
         source: "ANY",

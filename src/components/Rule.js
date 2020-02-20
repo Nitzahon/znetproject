@@ -14,7 +14,7 @@ export default class Rule extends Component {
   }
   getdays = () => {
     var today = new Date();
-    var createdOn = this.state.rule.createdOn;
+    var createdOn = this.props.elm.createdOn;
     var msInDay = 24 * 60 * 60 * 1000;
     createdOn.setHours(0, 0, 0, 0);
     today.setHours(0, 0, 0, 0);
@@ -24,7 +24,7 @@ export default class Rule extends Component {
     
   };
   showmode = ()=>{
-      if(this.state.rule.mode===true){
+      if(this.props.elm.mode===true){
         return(<div className="greenbx">
 <img className="vee" src={v} alt="v" /><span>ALLOW</span>
         </div>)
@@ -38,7 +38,7 @@ export default class Rule extends Component {
       <div className="rulebar Row">
         <img className="arrowBox Column" src={arrow} alt="arrow" />
         <div className="nameBox Column">
-          <div className="nbtitle">{this.state.rule.name}</div>
+          <div className="nbtitle">{this.props.elm.name}</div>
           <div className="nbcreated">Created {this.getdays()} days ago</div>
         </div>
     <div className="mode Column">{this.showmode()}</div>
