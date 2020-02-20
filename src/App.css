@@ -106,7 +106,7 @@ body {
   border-radius: 22px;
 }
 .rulecreate {
-  position: absolute;
+  position: relative;
   width: 1540px;
   height: 72px;
   margin: 16px 0;
@@ -129,4 +129,98 @@ line-height: 24px;
   color: #ffffff;
   left: 26px;
   bottom: 23px;
+}
+.Row {
+  display: table;
+}
+.Column {
+  display: table-cell;
+}
+.rulebar{
+  width: 1540px;
+height: 72px;
+left: 323px;
+top: 475px;
+ float:left; 
+background: #FFFFFF;
+border: 1px solid #DBDBDB;
+box-sizing: border-box;
+border-radius: 8px;
+}
+.arrowBox{
+  position: relative;
+  float: left;
+width: 18px;
+height: 18px;
+top:27px;
+left:20px;
+
+}
+.nameBox{
+  position: relative;
+  float:left;
+width: 304px;
+height: 35px;
+left: 37px;
+top:18px;
+
+font-family: Assistant;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+/* line-height: 24px; */
+
+/* Text */
+
+color: #373737;
+}
+.nbtitle{
+  
+font-family: Assistant;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis; 
+/* Text */
+
+color: #373737;
+}
+.nbcreated{
+  width: 144px;
+height: 16px;
+
+
+font-family: Assistant;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+/* line-height: 18px; */
+
+/* text 2 */
+
+color: #ADADAD;
+}
+.mode{
+  position: relative;
+float: left; 
+left: 508px;
+top:23px;
+}
+.greenbx{
+  width: 82px;
+height: 27px;
+
+
+background: #AADBB2;
+border-radius: 4px;
+}
+.redbx{
+  width: 82px;
+  height: 27px;
+
+  
+background: #FF7878;
+border-radius: 4px;
 }
