@@ -77,11 +77,13 @@ body {
   width: 1541px;
   left: 323px;
   top: 393px;
-  max-height: 905px;
-  white-space: nowrap; 
+  max-height: 765px;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: clip; 
-
+  text-overflow: clip;
+}
+.nrcontainer {
+  margin-top: 26px;
 }
 .firewallrules {
   position: absolute;
@@ -113,7 +115,7 @@ body {
   position: relative;
   width: 1540px;
   height: 72px;
-  margin: 16px 0 0;
+
   /* left: 323px;
 top: 387px; */
 
@@ -122,17 +124,27 @@ top: 387px; */
   box-sizing: border-box;
   border-radius: 8px;
 }
-.rulecreate > span{
-  
-font-family: Assistant;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 24px;
+.rulecreate > span {
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
   position: absolute;
   color: #ffffff;
   left: 26px;
   bottom: 23px;
+}
+.newrule {
+  width: 1541px;
+  height: 570px;
+  left: 323px;
+  top: 387px;
+
+  background: #ffffff;
+  border: 1px dashed #6b5a9b;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 .Row {
   display: table;
@@ -140,96 +152,93 @@ line-height: 24px;
 .Column {
   display: table-cell;
 }
-.rulebar{
+.rulebar {
   width: 1540px;
-height: 72px;
-left: 323px;
-top: 475px;
- float:left; 
-background: #FFFFFF;
-border: 1px solid #DBDBDB;
-box-sizing: border-box;
-border-radius: 8px;
-margin:16px 0 0;}
-.arrowBox{
+  height: 72px;
+  left: 323px;
+  top: 475px;
+  float: left;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 16px 0 0;
+}
+.arrowBox {
   position: relative;
   float: left;
-width: 18px;
-height: 18px;
-top:27px;
-left:20px;
-
+  width: 18px;
+  height: 18px;
+  top: 27px;
+  left: 20px;
 }
-.nameBox{
+.nameBox {
   position: relative;
-  float:left;
-width: 528px;
-height: 35px;
-left: 37px;
-top:18px;
+  float: left;
+  width: 528px;
+  height: 35px;
+  left: 37px;
+  top: 18px;
 
-font-family: Assistant;
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-/* line-height: 24px; */
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  /* line-height: 24px; */
 
-/* Text */
+  /* Text */
 
-color: #373737;
+  color: #373737;
 }
-.nbtitle{
-  
-font-family: Assistant;
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-white-space: nowrap; 
-overflow: hidden;
-text-overflow: ellipsis; 
-/* Text */
+.nbtitle {
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Text */
 
-color: #373737;
+  color: #373737;
 }
-.nbcreated{
+.nbcreated {
   width: 144px;
-height: 16px;
+  height: 16px;
 
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  /* line-height: 18px; */
 
-font-family: Assistant;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-/* line-height: 18px; */
+  /* text 2 */
 
-/* text 2 */
-
-color: #ADADAD;
+  color: #adadad;
 }
-.mode{
+.mode {
   position: relative;
-float: left; 
-/* left: 508px; */
-top:23px;
+  float: left;
+  /* left: 508px; */
+  top: 23px;
 }
-.greenbx{
+.greenbx {
   width: 82px;
-height: 27px;
-font-family: Assistant;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 18px;
-display: flex;
-align-items: center;
+  height: 27px;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
 
-color: #FFFFFF;
+  color: #ffffff;
 
-
-background: #AADBB2;
-border-radius: 4px;
+  background: #aadbb2;
+  border-radius: 4px;
 }
-.redbx{
+.redbx {
   width: 82px;
   height: 27px;
 
@@ -240,25 +249,215 @@ border-radius: 4px;
   line-height: 18px;
   display: flex;
   align-items: center;
+
+  color: #ffffff;
+
+  background: #ff7878;
+  border-radius: 4px;
+}
+.ex {
+  position: relative;
+  left: 8px;
+}
+.vee {
+  position: relative;
+  left: 6.41px;
+}
+.redbx > span {
+  position: relative;
+  left: 15px;
+}
+.greenbx > span {
+  position: relative;
+  left: 11.41px;
+}
+.protocolbox {
+  position: relative;
+  float: left;
+  left: 76px;
+  width: 103px;
+  height: 32px;
+  top: 20px;
+  margin-right: 67px;
+}
+.prototext {
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  /* text 2 */
+
+  color: #adadad;
+}
+.prototypes {
+  display: flex;
+}
+.prototag {
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 2px 3px;
+  color: #ffffff;
+  background: #6b5a9b;
+  border-radius: 54px;
+  margin-right: 5.26px;
+}
+.source-box{
+  position: relative;
+  float: left;
+  display:flex;
+  width: 142px;
+  height: 35px;
+  left:67px;
+  top: 19px;
+
+
+}
+.des-box{
+  position: relative;
+  float: left;
+  display:flex;
+  width: 142px;
+height: 35px;
+left: 100px;
+top:19px;
+
+
+}
+.source-img, .des-img{
+  position: relative;
+  top:8px;
+}
+.source-text-container{
+  position: relative;
+  left:15.21px;
+}
+.iptext{
+  position: relative;
+  width: 85.94px;
+height: 21px;
+
+font-family: Assistant;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height */
+
+
+/* Text */
+
+color: #373737;
+}
+.greytext{
+  position: relative;
+  float: left;
+width: 103px;
+height: 16px;
+
+
+font-family: Assistant;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+
+/* text 2 */
+
+color: #ADADAD;
+}
+.arrow-grey{
+  position:relative;
+  float:left;
+  top:28px;
+  left:67px;
+  right:22px;
+}
+.createfwrtext{
+  position: relative;
+  width: 205px;
+height: 30px;
+left: 32px;
+top: 32px;
+
+font-family: Assistant;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 24px;
+
+/* Text */
+
+color: #373737;
+}
+.namebox{
+  position: relative;
+  float:top;
+  width: 344px;
+height: 61px;
+top:114px;
+left:32px;
+}
+.choosename{
+  border: 1px solid #979FB4;
+box-sizing: border-box;
+border-radius: 22px;
+width: 339px;
+}
+.sourceinput-box{
+  position: relative;
   
-  color: #FFFFFF;
-  
-background: #FF7878;
-border-radius: 4px;
+  height: 128px;
+  left: 50px;
+  top: 114px;
 }
-.ex{
-  position: relative;
-  left:8px;
+.sourceinput-box > form{
+  font-family: Assistant;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height */
 }
-.vee{
-  position: relative;
-  left:6.41px;
+.ipinput{
+  width: 339px;
+  height: 31px;
+  border: 1px solid #979FB4;
+box-sizing: border-box;
+border-radius: 22px;
 }
-.redbx>span{
+.expiration-box{
   position: relative;
-  left:15px;
+  float:left;
+  top:114px;
+  left:150px;
+
 }
-.greenbx>span{
+.column1{
   position: relative;
-  left:11.41px;
+  left:32px;
+}
+.modebox{
+  position: relative;
+  float:top;
+  top:150px;
+  left:32px;
+}
+.tempcon{
+  position: relative;
+  top:300px;
+  left:500px;
+}
+.tempcon> button{
+border:none;
 }

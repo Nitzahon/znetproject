@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import bg from "./background.svg";
 import Rule from "./components/Rule";
+import NewRule from "./components/NewRule";
 export default class App extends Component {
   state = {
     rules: [
@@ -12,7 +13,8 @@ export default class App extends Component {
         protocols: ["HTTP"],
         source: "10.0.0.0/16",
         destination: "ANY",
-        expiration: new Date(2020, 1, 27, 0, 0, 0, 0)
+        expiration: new Date(2020, 1, 27, 0, 0, 0, 0),
+        favorite:true
       },
       {
         name: "Allow SMTP server integration. created per request of ... ",
@@ -21,7 +23,8 @@ export default class App extends Component {
         protocols: ["SMTP", "2 more ..."],
         source: "ANY",
         destination: "10.0.1.215/32",
-        expiration: false
+        expiration: false,
+        favorite:false
       },
       {
         name: "Ping in the company",
@@ -30,7 +33,8 @@ export default class App extends Component {
         protocols: ["ICMP"],
         source: "ANY",
         destination: "ANY",
-        expiration: false
+        expiration: false,
+        favorite:false
       }
     ],
     flag: false,
@@ -38,6 +42,9 @@ export default class App extends Component {
   };
   updateflag = () => {
     this.setState({ flag: !this.state.flag });
+  };
+  updaterules = (rule)=>{
+    this.setState({rules:[...this.state.rules, rule]});
   };
   show = () => {
     if (this.state.flag === false) {
@@ -47,7 +54,7 @@ export default class App extends Component {
         </button>
       );
     } else {
-      return <div></div>;
+      return (<div><NewRule updaterules={this.updaterules} updateflag={this.updateflag}/></div>);
     }
   };
   updatefilter = e => {
@@ -82,7 +89,7 @@ export default class App extends Component {
             </div>
             <br />
 
-            <div>{this.show()}</div>
+            <div className="nrcontainer">{this.show()}</div>
             <div>{this.rules()}</div>
           </div>
         </div>
