@@ -77,7 +77,11 @@ body {
   width: 1541px;
   left: 323px;
   top: 393px;
-  border: 1px solid black;
+  max-height: 905px;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: clip; 
+
 }
 .firewallrules {
   position: absolute;
@@ -109,7 +113,7 @@ body {
   position: relative;
   width: 1540px;
   height: 72px;
-  margin: 16px 0;
+  margin: 16px 0 0;
   /* left: 323px;
 top: 387px; */
 
@@ -146,7 +150,7 @@ background: #FFFFFF;
 border: 1px solid #DBDBDB;
 box-sizing: border-box;
 border-radius: 8px;
-}
+margin:16px 0 0;}
 .arrowBox{
   position: relative;
   float: left;
@@ -159,7 +163,7 @@ left:20px;
 .nameBox{
   position: relative;
   float:left;
-width: 304px;
+width: 528px;
 height: 35px;
 left: 37px;
 top:18px;
@@ -205,12 +209,21 @@ color: #ADADAD;
 .mode{
   position: relative;
 float: left; 
-left: 508px;
+/* left: 508px; */
 top:23px;
 }
 .greenbx{
   width: 82px;
 height: 27px;
+font-family: Assistant;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 18px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
 
 
 background: #AADBB2;
@@ -220,7 +233,32 @@ border-radius: 4px;
   width: 82px;
   height: 27px;
 
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  
+  color: #FFFFFF;
   
 background: #FF7878;
 border-radius: 4px;
+}
+.ex{
+  position: relative;
+  left:8px;
+}
+.vee{
+  position: relative;
+  left:6.41px;
+}
+.redbx>span{
+  position: relative;
+  left:15px;
+}
+.greenbx>span{
+  position: relative;
+  left:11.41px;
 }
