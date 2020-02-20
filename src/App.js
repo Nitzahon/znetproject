@@ -61,13 +61,7 @@ export default class App extends Component {
           .includes(this.state.filterr.toUpperCase())===true;
       });
       return(filtarr.map((element, i) => {
-        return <Rule key={i} name={element.name}
-        createdOn={element.createdOn}
-        mode={element.mode}
-        protocols={element.protocols}
-        source={element.source}
-        destination={element.destination}
-        expiration={element.expiration}/>
+        return <Rule key={i} elm={element}/>
       }));
   }
   render() {
