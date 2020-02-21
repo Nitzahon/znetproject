@@ -7,6 +7,7 @@ export default class App extends Component {
   state = {
     rules: [
       {
+        id:0,
         name: "Block HTTP from the break-room",
         createdOn: new Date(2020, 1, 17, 0, 0, 0, 0),
         mode: false,
@@ -17,6 +18,7 @@ export default class App extends Component {
         favorite:true
       },
       {
+        id:1,
         name: "Allow SMTP server integration. created per request of ... ",
         createdOn: new Date(2020, 1, 17, 0, 0, 0, 0),
         mode: true,
@@ -26,7 +28,8 @@ export default class App extends Component {
         expiration: false,
         favorite:false
       },
-      {
+      { 
+        id:2,
         name: "Ping in the company",
         createdOn: new Date(2020, 1, 10, 0, 0, 0, 0),
         mode: true,
@@ -37,14 +40,21 @@ export default class App extends Component {
         favorite:false
       }
     ],
-    flag: false,
+    flag: true,
     filterr: ""
   };
+
   updateflag = () => {
     this.setState({ flag: !this.state.flag });
   };
   updaterules = (rule)=>{
+    rule.id=this.state.rules.length;
     this.setState({rules:[...this.state.rules, rule]});
+  };
+  updatefavorite = (i)=>{
+    var rules=this.state.rules;
+    rules[i].favorite=!rules[i].favorite;
+    this.setState({rules:rules});
   };
   show = () => {
     if (this.state.flag === false) {
@@ -62,13 +72,14 @@ export default class App extends Component {
   };
   rules = () =>{
     var filtarr=this.state.rules
-      .filter(elm => {
+      .filter((elm) => {
         return elm.name
           .toUpperCase()
           .includes(this.state.filterr.toUpperCase())===true;
       });
-      return(filtarr.map((element, i) => {
-        return <Rule key={i} elm={element}/>
+      return(filtarr.map((element,i) => {
+        return <Rule key={i} elm={element} updatefavorite={this.updatefavorite}/>
+        
       }));
   }
   render() {
