@@ -40,7 +40,7 @@ export default class App extends Component {
         favorite:false
       }
     ],
-    flag: true,
+    flag: false,
     filterr: ""
   };
 
