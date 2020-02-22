@@ -22,7 +22,7 @@ export default class App extends Component {
         name: "Allow SMTP server integration. created per request of ... ",
         createdOn: new Date(2020, 1, 17, 0, 0, 0, 0),
         mode: true,
-        protocols: ["SMTP", "2 more ..."],
+        protocols: ["SMTP", "HTTP", "ICMP"],
         source: "ANY",
         destination: "10.0.1.215/32",
         expiration: false,

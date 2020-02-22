@@ -57,9 +57,20 @@ export default class Rule extends Component {
     this.props.updatefavorite(this.props.elm.id);
   };
   protolist = () => {
-    return this.props.elm.protocols.map(element => {
-      return <div className="prototag">{element}</div>;
-    });
+  var protoarr = this.props.elm.protocols;
+  var filtprotoarr =   protoarr.filter((e,i)=>{
+    return(i===0);
+
+  });
+  if(protoarr.length>2){
+    filtprotoarr = [...filtprotoarr, (protoarr.length - 1) + " more ..."];
+  } 
+  else if(protoarr.length>1){
+    filtprotoarr = [...filtprotoarr, protoarr[protoarr.length - 1]];
+  } 
+  return filtprotoarr.map(element => {
+    return <div className="prototag">{element}</div>;
+  }); 
   };
   expiredisplay = () => {
     if (this.props.elm.expiration === false) {
@@ -123,7 +134,6 @@ export default class Rule extends Component {
 
         </div>
         {this.expiredisplay()}
-        {/* TODO  ADD expiration, favorite star(use flag function to switch between full and empty, add triple dots for options) */}
         <div className="Column star" onClick={this.updatefavorite}>{this.star()}</div>
         <div className="Column option"><img src={options} alt="options"/></div>
       </div>

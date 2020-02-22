@@ -160,6 +160,9 @@ export default class NewRule extends Component {
                 <option value="HTTP">HTTP</option>
                 <option value="SMTP">SMTP</option>
                 <option value="ICMP">ICMP</option>
+                <option value="TCP">TCP</option>
+                <option value="UDP">UDP</option>
+                <option value="FTP">FTP</option>
               </select>
             </div>
             <div className="protolist">
