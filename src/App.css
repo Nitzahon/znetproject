@@ -502,7 +502,7 @@ border-radius: 22px;
   position: relative;
   float: right;
   left:0px;
-  margin-top: 233px ;
+  margin-top: 200px ;
 }
 
 .modebox{
@@ -724,6 +724,7 @@ color: #282828;
   
   display: flex;
   margin-right: 32px;
+
   
 }
 .createbtn{
