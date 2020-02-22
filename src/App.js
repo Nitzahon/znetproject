@@ -101,7 +101,7 @@ export default class App extends Component {
             <br />
 
             <div className="nrcontainer">{this.show()}</div>
-            <div>{this.rules()}</div>
+            <div className="ruleres">{this.rules()}</div>
           </div>
         </div>
       </div>
