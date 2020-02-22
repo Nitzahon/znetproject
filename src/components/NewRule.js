@@ -97,9 +97,10 @@ export default class NewRule extends Component {
     var tar = e.target.value;
     if (tar === "ANY") {
       this.setState({ destination: tar });
+      document.getElementById("desinput").value = "";
     } else {
       this.setState({ destination: "" });
-      document.getElementById("desinput").value = "";
+
     }
   };
   addipdes = e => {
@@ -176,26 +177,26 @@ export default class NewRule extends Component {
           <div className="Row sourceinput-box">
             <div className="Row">Source</div>
             <form>
-              <div className="radio">
-                <label>
+              <div className="radios">
+              <label class="radio-container">Any
                   <input
                     type="radio"
                     value="ANY"
                     checked={this.state.source === "ANY"}
                     onChange={this.sourcechange}
                   />
-                  &nbsp;Any
+                    <span class="selradio"></span>
                 </label>
               </div>
-              <div className="radio">
-                <label>
+              <div className="radios">
+              <label class="radio-container">Custom
                   <input
                     type="radio"
                     value="Custom"
                     checked={this.state.source !== "ANY"}
                     onChange={this.sourcechange}
                   />
-                  &nbsp;Custom
+                  <span class="selradio"></span>
                 </label>
                 <input
                   type="text"
@@ -211,26 +212,26 @@ export default class NewRule extends Component {
           <div className="Row desinput-box">
             <div className="Row">Destination</div>
             <form>
-              <div className="radio">
-                <label>
+              <div className="radios">
+              <label class="radio-container">Any
                   <input
                     type="radio"
                     value="ANY"
                     checked={this.state.destination === "ANY"}
                     onChange={this.deschange}
                   />
-                  &nbsp;Any
+                    <span class="selradio"></span>
                 </label>
               </div>
-              <div className="radio">
-                <label>
+              <div className="radios">
+              <label class="radio-container">Custom
                   <input
                     type="radio"
                     value="Custom"
                     checked={this.state.destination !== "ANY"}
                     onChange={this.deschange}
                   />
-                  &nbsp;Custom
+                  <span class="selradio"></span>
                 </label>
                 <input
                   type="text"
