@@ -16,6 +16,13 @@ export default class Rule extends Component {
       rule: props.elm
     };
   }
+  showname=()=>{
+    var str = this.props.elm.name;
+    if( str.length>53){
+      str=str.substring(0, 53)+" ...";
+    }
+    return str;
+  };
   getdays = () => {
     var today = new Date();
     var createdOn = this.props.elm.createdOn;
@@ -103,7 +110,7 @@ export default class Rule extends Component {
       <div className="rulebar Row">
         <img className="arrowBox Column" src={arrow} alt="arrow" />
         <div className="nameBox Column">
-          <div className="nbtitle">{this.props.elm.name}</div>
+    <div className="nbtitle">{this.showname()}</div>
           <div className="nbcreated">Created {this.getdays()} days ago</div>
         </div>
         <div className="mode Column">{this.showmode()}</div>

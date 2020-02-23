@@ -19,7 +19,7 @@ export default class App extends Component {
       },
       {
         id:1,
-        name: "Allow SMTP server integration. created per request of ... ",
+        name: "Allow SMTP server integration. created per request of the system admin",
         createdOn: new Date(2020, 1, 17, 0, 0, 0, 0),
         mode: true,
         protocols: ["SMTP", "HTTP", "ICMP"],
