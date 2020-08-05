@@ -13,6 +13,7 @@ export default class NewRule extends Component {
       destination: "",
       expiration: "",
       favorite: false
+      //,inputarget:""
     };
   }
   updaterules = () => {
@@ -109,15 +110,41 @@ export default class NewRule extends Component {
     }
     this.setState({ destination: e.target.value });
   };
+  // handleClick = e => {
+  //   this.inputElement.click();
+  // } //attempt to make calendar open onfocus
   _onFocus = e => {
-    e.currentTarget.type = "date";
+    e.currentTarget.type = "date"; //change to date type
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    var dd = tomorrow.getDate();
+    var mm = tomorrow.getMonth() + 1; //January is 0!
+    var yyyy = tomorrow.getFullYear();
+    if (dd < 10) {
+      dd = "0" + dd;
+    }
+    if (mm < 10) {
+      mm = "0" + mm;
+    }
+    tomorrow = yyyy + "-" + mm + "-" + dd;
+    e.currentTarget.min = tomorrow; //make it not normally possible to choose date in the past
+    //this.handleClick(e);
   };
+
   _onBlur = e => {
     e.currentTarget.type = "text";
     e.currentTarget.placeholder = "Select date ...";
+    let d1 = new Date();
+    let d2 = new Date(e.target.value);
+    if(d2<=d1){ //catch if date was changed to improper date in roundabout way
+      e.target.value=""
+      this.setState({ expiration: e.target.value });//remove stored date state if improper
+      alert("Selected Date must be in the future");     
+    }
   };
   expchange = e => {
     this.setState({ expiration: new Date(e.target.value) });
+
   };
   render() {
     return (
@@ -248,7 +275,7 @@ export default class NewRule extends Component {
         <div className="Column cloumn3">
           <div className="Row expiration-box">
             <div className="Row expirationtext">Expiration</div>
-            <div className="Row">
+            <div className="Row" >
               <input
                 class="dateinput"
                 type="text"
@@ -256,6 +283,8 @@ export default class NewRule extends Component {
                 onBlur={this._onBlur}
                 onChange={this.expchange}
                 placeholder="Select date..."
+                //ref={input => this.inputElement = input}//attempt to make calendar open on focus
+
               />
             </div>
           </div>
