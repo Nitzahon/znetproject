@@ -29,7 +29,7 @@ export default class Rule extends Component {
     var msInDay = 24 * 60 * 60 * 1000;
     createdOn.setHours(0, 0, 0, 0);
     today.setHours(0, 0, 0, 0);
-    var diff = Math.abs(today - createdOn) / msInDay;
+    var diff = Math.floor(Math.abs(today - createdOn) / msInDay);
     ///msInDay;
     return diff;
   };
@@ -39,7 +39,7 @@ export default class Rule extends Component {
     var msInDay = 24 * 60 * 60 * 1000;
     expired.setHours(0, 0, 0, 0);
     today.setHours(0, 0, 0, 0);
-    var diff = Math.abs(expired - today) / msInDay;
+    var diff = Math.floor(Math.abs(expired - today) / msInDay);
     ///msInDay;
     return diff;
   };
